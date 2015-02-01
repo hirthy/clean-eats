@@ -1,0 +1,18 @@
+CAMIS,camis,int
+DBA,dba,string
+BORO,boro,string
+BUILDING,building,string
+STREET,street,string
+ZIPCODE,zipcode,string
+PHONE,phone,string
+CUISINE DESCRIPTION,cuisine_description,string
+INSPECTION DATE,inspection_date,date
+ACTION,action,string
+VIOLATION CODE,violation_code,string
+VIOLATION DESCRIPTION,violation_description,string
+CRITICAL FLAG,critical_flag,string
+SCORE,score,int
+GRADE,grade,string
+GRADE DATE,grade_date,date
+RECORD DATE,record_date,date
+INSPECTION TYPE,inspection_type,string

@@ -1,0 +1,27 @@
+#grade-panel {
+	width: 540px;
+	height: 36px;
+}
+.panel-body {
+	padding: 6px 12px;
+}
+.rating {
+	cursor: pointer;
+}
+.highlight {
+	background-color: #f3f3f3;
+}
+.row {
+	margin: 10px;
+}
+.grade-label {
+	font-weight: normal;
+}
+#grades input {
+	margin: 4px;
+}
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}

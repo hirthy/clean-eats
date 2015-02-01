@@ -1,5 +1,5 @@
 (function() {
-
+  //search the embedded google maps for selected restaurant based on restaurant name and address
   loadMap = function(rating) {
       var iframe = $('#map');
       var search = $(rating).find('.restaurant').html() + ' ' + $(rating).find('.address').html() + ' New York, NY';
@@ -9,7 +9,7 @@
       $('.rating').removeClass('highlight');
       $(rating).addClass('highlight');
     }
-
+  //AJAX calls used to update the results when the cuisine or grade filters are changed
   search = function() {
     var grades = $("#grades input:checkbox:checked").map(function(){
       return $(this).val();

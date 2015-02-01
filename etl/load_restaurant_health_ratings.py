@@ -1,5 +1,8 @@
-#source: http://snipplr.com/view.php?codeview&id=55913 as basis for loading
-#source: http://www.nyc.gov/html/doh/downloads/pdf/rii/how-we-score-grade.pdf shows that lower scores are better
+# source: http://snipplr.com/view.php?codeview&id=55913 as basis for loading
+# source: http://www.nyc.gov/html/doh/downloads/pdf/rii/how-we-score-grade.pdf shows that lower scores are better
+
+# This file loads in the restaurant rating data based on MySQL credentials, a csv file and a mapping file
+# I would normally add a file for logging errors and a check for duplicates if data was to be loaded on a scheduled basis
 import sys
 import MySQLdb
 import csv
@@ -33,6 +36,7 @@ def getConn(host, user, passwd, db):
                            db = db)
     return conn
 
+# transform the data to work with db
 def cleanLine(line,types):
 
     # convert dates and remove special characters
@@ -52,6 +56,7 @@ def cleanLine(line,types):
         
     return [cleanItem(ind,x) for ind,x in enumerate(line)]
 
+# read the file line by line and insert the data
 def loadCSV(cursor, table, filename, mapfile):
 
     #create dictionary from mapping file
@@ -87,6 +92,7 @@ def loadCSV(cursor, table, filename, mapfile):
 
     return
 
+# build each insert query
 def buildInsertSQL(table, numfields, values):
 
     assert(numfields > 0)

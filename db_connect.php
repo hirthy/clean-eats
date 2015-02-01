@@ -1,4 +1,5 @@
 <?
+  // connect to database
   $servername = getenv("DB_SERVER_NAME");
   $username = getenv("DB_USER_NAME");
   $password = getenv("DB_PASSWORD");

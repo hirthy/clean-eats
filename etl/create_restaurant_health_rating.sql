@@ -1,6 +1,6 @@
 create database clean_eats
 create table clean_eats.restaurant_health_rating (
-    pk_restaurant_health_rating_id int not null auto_increment, --could create a bigint if production environment and more rows were to be inserted
+    pk_restaurant_health_rating_id int not null auto_increment, --could use bigint if production environment and more rows were to be inserted
     camis int,
     dba varchar(500),
     boro varchar(50),
